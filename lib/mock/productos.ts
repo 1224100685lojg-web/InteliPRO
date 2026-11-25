@@ -1,0 +1,253 @@
+import type { Producto } from "../types";
+
+// Lienzo cuadrado y uniforme: la foto del producto se ajusta con padding
+// sobre el gris claro de la tienda, como en una ficha de producto premium.
+const unsplash = (foto: string): string =>
+  `https://images.unsplash.com/${foto}?auto=format&fit=contain&w=700&h=700&q=80&bg=f5f5f7`;
+
+export const productos: Producto[] = [
+  {
+    id: "p-01",
+    nombre: "Laptop UltraBook Pro 14",
+    descripcion:
+      "Laptop ultraligera con pantalla 14\" 2.5K, 16 GB de RAM y SSD de 512 GB para trabajo profesional.",
+    precio: 24999,
+    categoriaId: "c-01",
+    categoriaNombre: "Cómputo",
+    imagen: unsplash("photo-1517336714731-489689fd1ca8"),
+    stock: 12,
+    tiendaId: "t-01",
+    destacado: true,
+  },
+  {
+    id: "p-02",
+    nombre: "Monitor 27\" 4K UHD",
+    descripcion:
+      "Monitor 4K de 27 pulgadas con HDR10, 60 Hz y conexiones HDMI y USB-C para diseño y productividad.",
+    precio: 8999,
+    categoriaId: "c-01",
+    categoriaNombre: "Cómputo",
+    imagen: unsplash("photo-1527443224154-c4a3942d3acf"),
+    stock: 8,
+    tiendaId: "t-01",
+  },
+  {
+    id: "p-03",
+    nombre: "Tablet 11\" WiFi 128GB",
+    descripcion:
+      "Tablet de 11 pulgadas con 128 GB de almacenamiento, ideal para estudio, lectura y entretenimiento.",
+    precio: 6499,
+    categoriaId: "c-01",
+    categoriaNombre: "Cómputo",
+    imagen: unsplash("photo-1544244015-0df4b3ffc6b0"),
+    stock: 15,
+    tiendaId: "t-03",
+  },
+  {
+    id: "p-04",
+    nombre: "Teclado Mecánico RGB",
+    descripcion:
+      "Teclado mecánico con switches táctiles, iluminación RGB personalizable y reposamuñecas desmontable.",
+    precio: 1499,
+    categoriaId: "c-01",
+    categoriaNombre: "Cómputo",
+    imagen: unsplash("photo-1587829741301-dc798b83add3"),
+    stock: 22,
+    tiendaId: "t-02",
+  },
+  {
+    id: "p-05",
+    nombre: "Audífonos Noise Cancelling",
+    descripcion:
+      "Audífonos de diadema con cancelación activa de ruido, 30 horas de batería y estuche de viaje.",
+    precio: 4299,
+    categoriaId: "c-02",
+    categoriaNombre: "Audio",
+    imagen: unsplash("photo-1583394838336-acd977736f90"),
+    stock: 20,
+    tiendaId: "t-02",
+    destacado: true,
+  },
+  {
+    id: "p-06",
+    nombre: "Bocina Bluetooth Portátil",
+    descripcion:
+      "Bocina inalámbrica resistente al agua con 12 horas de autonomía y sonido estéreo de 360 grados.",
+    precio: 1299,
+    categoriaId: "c-02",
+    categoriaNombre: "Audio",
+    imagen: unsplash("photo-1608043152269-423dbba4e7e1"),
+    stock: 25,
+    tiendaId: "t-01",
+  },
+  {
+    id: "p-07",
+    nombre: "Audífonos Sport Inalámbricos",
+    descripcion:
+      "Audífonos deportivos con sujeción ergonómica, resistencia al sudor y controles táctiles.",
+    precio: 899,
+    categoriaId: "c-02",
+    categoriaNombre: "Audio",
+    imagen: unsplash("photo-1606220945770-b5b6c2c55bf1"),
+    stock: 0,
+    tiendaId: "t-03",
+  },
+  {
+    id: "p-08",
+    nombre: "Smartphone 5G 256GB",
+    descripcion:
+      "Smartphone 5G con pantalla AMOLED de 6.5 pulgadas, triple cámara y 256 GB de almacenamiento.",
+    precio: 14999,
+    categoriaId: "c-03",
+    categoriaNombre: "Telefonía",
+    imagen: unsplash("photo-1592899677977-9c10ca588bbd"),
+    stock: 10,
+    tiendaId: "t-02",
+    destacado: true,
+  },
+  {
+    id: "p-09",
+    nombre: "Smartwatch Serie 8",
+    descripcion:
+      "Reloj inteligente con GPS, monitor de frecuencia cardiaca, oxígeno en sangre y pantalla always-on.",
+    precio: 5499,
+    categoriaId: "c-03",
+    categoriaNombre: "Telefonía",
+    imagen: unsplash("photo-1523275335684-37898b6baf30"),
+    stock: 18,
+    tiendaId: "t-01",
+  },
+  {
+    id: "p-10",
+    nombre: "Power Bank 20000mAh",
+    descripcion:
+      "Batería portátil de 20000 mAh con carga rápida de 22.5 W y dos puertos USB más USB-C.",
+    precio: 699,
+    categoriaId: "c-03",
+    categoriaNombre: "Telefonía",
+    imagen: unsplash("photo-1609091839311-d5365f9ff1c5"),
+    stock: 40,
+    tiendaId: "t-03",
+  },
+  {
+    id: "p-11",
+    nombre: "Mouse Ergonómico Inalámbrico",
+    descripcion:
+      "Mouse inalámbrico con diseño ergonómico, sensor de 4000 DPI y conexión Bluetooth y USB.",
+    precio: 799,
+    categoriaId: "c-04",
+    categoriaNombre: "Accesorios",
+    imagen: unsplash("photo-1527814050087-3793815479db"),
+    stock: 30,
+    tiendaId: "t-02",
+  },
+  {
+    id: "p-12",
+    nombre: "Cable USB-C 2m",
+    descripcion:
+      "Cable USB-C a USB-C de 2 metros con carga rápida de 100 W y transferencia de datos de 480 Mbps.",
+    precio: 199,
+    categoriaId: "c-04",
+    categoriaNombre: "Accesorios",
+    imagen: unsplash("photo-1583863788434-e58a36330cf0"),
+    stock: 35,
+    tiendaId: "t-03",
+  },
+  {
+    id: "p-13",
+    nombre: "Mochila para Laptop 15\"",
+    descripcion:
+      "Mochila impermeable con compartimento acolchado para laptop de hasta 15 pulgadas y puerto USB.",
+    precio: 999,
+    categoriaId: "c-04",
+    categoriaNombre: "Accesorios",
+    imagen: unsplash("photo-1553062407-98eeb64c6a62"),
+    stock: 0,
+    tiendaId: "t-01",
+  },
+  {
+    id: "p-14",
+    nombre: "Hub USB-C 7 en 1",
+    descripcion:
+      "Adaptador USB-C con HDMI 4K, dos USB 3.0, lector SD, microSD y puerto de carga PD de 100 W.",
+    precio: 649,
+    categoriaId: "c-04",
+    categoriaNombre: "Accesorios",
+    imagen: unsplash("photo-1625842268584-8f3296236761"),
+    stock: 27,
+    tiendaId: "t-01",
+  },
+  {
+    id: "p-15",
+    nombre: "Foco Inteligente RGB",
+    descripcion:
+      "Foco LED inteligente con 16 millones de colores, control por app y compatibilidad con asistentes de voz.",
+    precio: 349,
+    categoriaId: "c-05",
+    categoriaNombre: "Hogar Inteligente",
+    imagen: unsplash("photo-1558002038-1055907df827"),
+    stock: 40,
+    tiendaId: "t-02",
+  },
+  {
+    id: "p-16",
+    nombre: "Cámara de Seguridad WiFi",
+    descripcion:
+      "Cámara de vigilancia 2K con visión nocturna, detección de movimiento y audio bidireccional.",
+    precio: 1799,
+    categoriaId: "c-05",
+    categoriaNombre: "Hogar Inteligente",
+    imagen: unsplash("photo-1557324232-b8917d3c3dcb"),
+    stock: 14,
+    tiendaId: "t-03",
+  },
+  {
+    id: "p-17",
+    nombre: "Hub Hogar Inteligente",
+    descripcion:
+      "Centro de control para dispositivos del hogar con WiFi, Bluetooth y Zigbee integrados.",
+    precio: 2199,
+    categoriaId: "c-05",
+    categoriaNombre: "Hogar Inteligente",
+    imagen: unsplash("photo-1558089687-f282ffcbc126"),
+    stock: 9,
+    tiendaId: "t-01",
+  },
+  {
+    id: "p-18",
+    nombre: "Control Inalámbrico Gaming",
+    descripcion:
+      "Control inalámbrico con gatillos analógicos, vibración háptica y batería de 40 horas.",
+    precio: 1199,
+    categoriaId: "c-06",
+    categoriaNombre: "Gaming",
+    imagen: unsplash("photo-1592840496694-26d035b52b48"),
+    stock: 16,
+    tiendaId: "t-02",
+  },
+  {
+    id: "p-19",
+    nombre: "Silla Gamer Ergonómica",
+    descripcion:
+      "Silla gamer con soporte lumbar, reclinación de 180 grados y tapicería de piel sintética.",
+    precio: 5499,
+    categoriaId: "c-06",
+    categoriaNombre: "Gaming",
+    imagen: unsplash("photo-1598550476439-6847785fcea6"),
+    stock: 7,
+    tiendaId: "t-03",
+    destacado: true,
+  },
+  {
+    id: "p-20",
+    nombre: "Headset Gamer 7.1",
+    descripcion:
+      "Headset con sonido envolvente 7.1, micrófono con cancelación de ruido y almohadillas memory foam.",
+    precio: 1899,
+    categoriaId: "c-06",
+    categoriaNombre: "Gaming",
+    imagen: unsplash("photo-1618366712010-f4ae9c647dcb"),
+    stock: 11,
+    tiendaId: "t-01",
+  },
+];
